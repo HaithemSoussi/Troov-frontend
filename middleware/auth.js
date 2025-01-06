@@ -13,9 +13,10 @@ import { navigateTo } from '#app';
 // Définir le middleware d'authentification
 export default defineNuxtRouteMiddleware(() => {
     const authStore = useAuthStore(); // Récupérer le store d'authentification
-  
+    const isAuthenticated = localStorage.getItem("isAuthenticated");
+
     // Vérifier si l'utilisateur est authentifié
-    if (!authStore.isAuthenticated) {
+    if (!authStore.isAuthenticated && !isAuthenticated) {
       return navigateTo('/login'); // Rediriger vers la page de connexion
     }
   });
