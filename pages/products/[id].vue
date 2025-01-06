@@ -104,11 +104,12 @@ const product = ref<Product>({
   countInStock: 0,
 });
 
-const id = route.params.id;
 
+authStore.checkAuth();
+const id = route.params.id;
 onMounted(async () => {
   try {
-    authStore.checkAuth();
+    
     const { data } = await axios.get(
       `${config.public.apiBase}/users/products/${id}`,
       {
