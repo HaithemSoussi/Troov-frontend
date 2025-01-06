@@ -1,0 +1,10 @@
+/**
+ * @type {import('tsconfig').TSConfig}
+ */
+{
+  "extends": "./.nuxt/tsconfig.json",
+  "compilerOptions": {
+    "checkJs": true,
+    "allowJs": true,
+  }
+}
