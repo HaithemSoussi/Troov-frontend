@@ -1,6 +1,8 @@
 /**
  * @type {import('@nuxt/types').Configuration}
  */
+import dotenv from 'dotenv';
+dotenv.config();
 export default defineNuxtConfig({
   ssr: false,
   compatibilityDate: "2024-11-01",
@@ -19,7 +21,7 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: "http://localhost:5000/api", // API base URL
+      apiBase: process.env.API_URL, // API base URL
     },
   },
 
