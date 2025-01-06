@@ -158,7 +158,7 @@ const deleteProduct = async (id: string) => {
 const updateProduct = (product: Product) => {
   // Redirect to an update page, passing the product ID as a query parameter
   router.push({
-    path: `/users/products/${product._id}`,
+    path: `/products/${product._id}`,
   });
 };
 </script>
