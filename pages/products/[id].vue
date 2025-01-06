@@ -141,7 +141,13 @@ const updateProduct = async () => {
       `${config.public.apiBase}/users/products/${id}`,
       product.value,
       {
-        headers: { Authorization: `Bearer ${authStore.token}` },
+        headers: { 
+          Authorization: `Bearer ${authStore.token}`,
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          Pragma: 'no-cache',
+          Expires: '0',
+        },
+
       },
     );
     alert("Produit mis à jour avec succès.");
