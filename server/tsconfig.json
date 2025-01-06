@@ -1,0 +1,7 @@
+/** 
+* This file is used to extend the tsconfig.json file in the server folder
+*/
+  
+{
+  "extends": "../.nuxt/tsconfig.server.json"
+}
